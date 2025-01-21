@@ -1,0 +1,120 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    width: 300px;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.bulk-actions button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.bulk-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s ease;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-section h1 {
+    font-size: 32px;
+    color: #007bff;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Status Indicators */
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status.new {
+    background-color: #17a2b8;
+}
+
+.status.contacted {
+    background-color: #28a745;
+}
+
+.status.not-interested {
+    background-color: #dc3545;
+}
+
+/* Footer Section (Optional) */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for visualizations -->
+</head>
+<body>
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>DASHBOARD</h1>
+    </div>
+
+    <div class="container">
+        <!-- Key Metrics Section -->
+        <div class="metrics-section">
+            <h2>Key Metrics</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <h3>Total Leads</h3>
+                    <p>250</p>
+                </div>
+                <div class="metric">
+                    <h3>Conversion Rate</h3>
+                    <p>15%</p>
+                </div>
+                <div class="metric">
+                    <h3>Average Lead Response Time</h3>
+                    <p>2 hours</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualizations Section -->
+        <div class="visualizations-section">
+            <h2>Visualizations</h2>
+            <div class="charts">
+                <div class="chart">
+                    <h3>Lead Status Distribution</h3>
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h3>Lead Sources</h3>
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h3>Conversion Trends</h3>
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reports Section -->
+        <div class="reports-section">
+            <h2>Reports</h2>
+            <p>Generate and download performance reports:</p>
+            <button class="download-report">Download Weekly Report</button>
+            <button class="download-report">Download Monthly Report</button>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <h2>Filters</h2>
+            <form>
+                <label for="team-member">Filter by Team Member:</label>
+                <select id="team-member">
+                    <option value="all">All Team Members</option>
+                    <option value="rohit">Rohit Singh</option>
+                    <option value="sneha">Sneha Das</option>
+                    <option value="anjali">Anjali Nair</option>
+                    <option value="vikram">Vikram Malhotra</option>
+                </select>
+                <button type="submit" class="apply-filters">Apply Filters</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for Charts -->
+    <script>
+        // Pie Chart: Lead Status Distribution
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['New', 'Contacted', 'Not Interested'],
+                datasets: [{
+                    data: [100, 120, 30],
+                    backgroundColor: ['#007bff', '#28a745', '#dc3545']
+                }]
+            }
+        });
+
+        // Bar Chart: Lead Sources
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Website', 'Facebook', 'Google', 'Offline Event', 'Twitter'],
+                datasets: [{
+                    label: 'Leads',
+                    data: [50, 60, 40, 30, 20],
+                    backgroundColor: '#007bff'
+                }]
+            }
+        });
+
+        // Line Chart: Conversion Trends
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Conversions',
+                    data: [10, 15, 20, 25],
+                    borderColor: '#28a745',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

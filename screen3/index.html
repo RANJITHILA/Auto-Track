@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>LEAD MANAGEMENT</h1>
+    </div>
+
+    <div class="container">
+        <!-- Form to Add/Edit Leads -->
+        <div class="form-section">
+            <h2>Add or Edit Lead</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Lead Name:</label>
+                    <input type="text" id="name" placeholder="Enter lead name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Details:</label>
+                    <input type="text" id="contact" placeholder="Enter contact number" required>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Purchase Interest:</label>
+                    <input type="text" id="interest" placeholder="Enter purchase interest (e.g., SUV, Sedan)">
+                </div>
+                <div class="form-group">
+                    <label for="source">Source:</label>
+                    <select id="source">
+                        <option value="Facebook">Facebook</option>
+                        <option value="Google">Google</option>
+                        <option value="Website">Website</option>
+                        <option value="Offline Event">Offline Event</option>
+                        <option value="Twitter">Twitter</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="salesperson">Assigned Salesperson:</label>
+                    <input type="text" id="salesperson" placeholder="Enter salesperson's name">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" rows="4" placeholder="Enter any additional notes"></textarea>
+                </div>
+                <button type="submit" class="save-lead">Save Lead</button>
+            </form>
+        </div>
+
+        <!-- Bulk Upload Option -->
+        <div class="bulk-upload-section">
+            <h2>Bulk Upload</h2>
+            <p>Import leads from a spreadsheet file (.csv):</p>
+            <input type="file" id="bulk-upload" accept=".csv">
+            <button class="upload-button">Upload</button>
+        </div>
+
+        <!-- Notifications -->
+        <div class="notifications-section">
+            <h2>Notifications</h2>
+            <p><strong>Alert:</strong> You have 3 high-priority leads pending follow-up!</p>
+        </div>
+
+        <!-- Assignment System -->
+        <div class="assignment-section">
+            <h2>Assign/Reassign Leads</h2>
+            <form>
+                <div class="form-group">
+                    <label for="assign-lead">Select Lead:</label>
+                    <select id="assign-lead">
+                        <option value="Amit Sharma">Amit Sharma</option>
+                        <option value="Pooja Verma">Pooja Verma</option>
+                        <option value="Rahul Kumar">Rahul Kumar</option>
+                        <option value="Simran Kaur">Simran Kaur</option>
+                        <option value="Manoj Joshi">Manoj Joshi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="assign-salesperson">Assign to Salesperson:</label>
+                    <input type="text" id="assign-salesperson" placeholder="Enter salesperson's name">
+                </div>
+                <button type="submit" class="assign-button">Assign Lead</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
